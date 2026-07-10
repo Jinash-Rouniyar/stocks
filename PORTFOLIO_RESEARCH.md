@@ -1,6 +1,6 @@
 # Portfolio Research Tracker
 
-**Last updated:** Jul 8, 2026 — VERA → CAPR rotation planned; AdCom lotto rules set  
+**Last updated:** Jul 9, 2026 — Hold day (no trades); DRAM +3.9%, SOXX held, $75.5C spiked  
 **Account:** Robinhood individual margin ••••8849  
 **Purpose:** Living doc for trade ideas, triggers, and portfolio rules.
 
@@ -14,6 +14,7 @@
 - **QQQ is a stabilizer of last resort** — deploy cash there only when no compelling theme/opportunity exists.
 - **Rotation pattern:** Sell green non-core positions → buy obliterated conviction names on dip days (e.g. Jul 2: AAPL → DRAM/SOXX/NBIS).
 - **DRAM/SOXX are core holds** — do not trim for rebalancing.
+- **Covered-call timing:** sell/roll CCs **into strength (green days)** for richer premium + IV, not on red days. After buying back a CC on a dip, wait for a bounce to re-sell (Jul 8→9 lesson: ~$140 left on table by re-selling $75.5C on the dip instead of the next-day pop).
 - **Margin note:** Buying power ~$475 as of Jul 6 ($237 unleveraged). New buys require green rotation or deposit — not more margin.
 
 ---
@@ -51,16 +52,17 @@
 
 ---
 
-## Open positions (Jul 8 — planned after Wed open)
+## Open positions (Jul 9)
 
 | Position | Detail |
 |----------|--------|
-| **DRAM** | 111 shares @ $71.40 avg; ~$60 area post-Samsung (Jul 7) |
-| **Short DRAM Jul 31 $80C** | 1 contract @ $2.30 credit ($230); 100 shares covered, 11 unhedged |
-| **VERA** | 1 share @ $40.99 — **SELL Wed Jul 8 open** (PDUFA done; FDA approved Jul 7) |
-| **CAPR** | **BUY 3 shares** Wed Jul 8 — limit **$22.00–22.50**; ~$66 notional (~1% equity) |
+| **DRAM** | 111 shares @ $71.40 avg |
+| **Short DRAM Jul 31 $75.5C** | 1 contract @ $1.54 credit — sold Jul 8; 100 shares covered, 11 unhedged. Jul 9 mark ~$2.69 (DRAM ripped toward strike). |
+| **CAPR** | 3 shares @ $22.30 (AdCom lotto through Jul 29) — see sell playbook |
 
-**Pharma satellite:** Rotate VERA proceeds → CAPR. Optional **4th share** only on dip **≤ ~$21.50**.
+**DRAM options note:** Jul RS weaker post-Samsung; fine capping upside at **$75.5** vs prior **$80** strike. Prior $80C cycle (sold Mon @ $2.30) realized **~$137** profit ($110 Jul 7 + $27 Jul 8) ≈ **60% of max $230** before rolling down. $75.5C now underwater on paper (−$115 MTM) but covered — 82% model chance it expires worthless; if DRAM > $75.5 at expiry, 100 shares called away at $75.5 (still above $71.40 cost).
+
+**Pharma satellite:** CAPR only — optional **4th share** on dip **≤ ~$21.50**.
 
 ---
 
@@ -145,20 +147,48 @@ Jul 29 AdCom
 
 ---
 
-## Wed Jul 8 trades (planned)
+## Wed Jul 8 trades (completed)
 
 | Action | Detail |
 |--------|--------|
-| **Sell VERA** | At open — market or limit near quote; take profit or small loss |
-| **Buy CAPR ×3** | Limit $22.00–22.50; optional 4th ≤ ~$21.50 |
+| **Sell VERA** | At open — rotated out of PDUFA stub |
+| **Buy CAPR ×3** | @ $22.30 — AdCom lotto leg on |
+| **Roll DRAM $80C → $75.5C** | Single roll order 3:53 PM, net credit $0.48: BTC $80C @ ~$1.06 (+$27 on that leg), STO Jul 31 $75.5C @ $1.54 |
+
+**$80C cycle P&L (Mon → Wed):**
+
+| Leg | Credit / debit | Running realized |
+|-----|----------------|------------------|
+| Mon Jul 6 — sold $80C | +$230 ($2.30) | — |
+| Tue Jul 7 — BTC $80C | −$120 ($1.20) | **+$110** |
+| Tue Jul 7 — re-sold $80C | +$133 ($1.33) | +$110 |
+| Wed Jul 8 — BTC $80C | −$106 ($1.06) | **+$137** (~60% of $230 max) |
+| Wed Jul 8 — sold $75.5C | +$154 ($1.54) | new short leg |
+
+---
+
+## Thu Jul 9 (no trades — hold day)
+
+Green day across the book; nothing sold. Decisions logged:
+
+| Item | Detail |
+|------|--------|
+| **SOXX — held** | Considered trimming; kept. 1.863 sh @ $585.31 avg, now ~$582 (≈flat). Semis at proper portfolio weight → no reason to trim. +3.5% on the day ($562→$582). |
+| **DRAM — exploded** | $61.95 → **$64.34 close (+3.9%)**, intraday $58.4–$66.1 (huge range), 2.1M sh. Shares +~$265 unrealized on the day. |
+| **$75.5C — spiked** | Sold Jul 8 @ $1.54; today marked $1.66 → peaked ~$2.90 → $2.69 close. Paper −$115 on the short, but covered + still OTM (strike $75.5 vs $64 spot). Not a loss; hold to expiry / let assign if ITM Jul 31. |
+
+**Net DRAM day:** shares +$265 − option MTM $115 = **~+$150 net, green.**
+
+**Lesson — covered-call timing:** I rolled into the new $75.5C on Jul 8 (a dip day) at $1.54. Had I waited one session and sold the CC **into today's DRAM pop**, the same strike fetched ~$2.90 → **~+$140 more premium** (higher spot + IV expansion). **Rule going forward: after buying back a CC on a dip, sell the replacement CC into strength/green days, not immediately on the red day** — premium and IV are both richer into a bounce. Trade-off: requires a near-term bounce view and accepts one day of uncovered upside.
 
 ---
 
 ## Upcoming catalysts (memory)
 
 - **Jul 7** — Samsung earnings (DRAM already reacting AH ~$60)
-- **Jul 10** — SK Hynix ADR earnings
-- **Jul 31** — DRAM $80C expires; assignment trims to 11 shares if DRAM > $80
+- **Jul 10** — **SK Hynix Nasdaq ADR listing (SKHY)** — debut trading, not Q2 earnings
+- **Jul 29** — SK Hynix Q2 2026 earnings (Korea)
+- **Jul 31** — DRAM $75.5C expires; assignment trims to 11 shares if DRAM > $75.50
 
 ## Upcoming catalysts (pharma satellite)
 
@@ -278,6 +308,7 @@ AMD: compute — second source to NVDA (high PE, growth priced in)
 | Jul 3, 2026 | Reset: cleared flawed sector “1-year no-brainer” research after CEG stress-test |
 | Jul 3, 2026 | **Reframe:** PE is context, not veto. Already-ran is fine (SNDK 2025→2026 lesson) |
 | Jul 3, 2026 | **Committed H2’26–’27 sleeve:** GEV #1, then STRL, VRT, FIX; CRDO/POWL/PWR/NVT/MOD/DELL |
+| Jul 9, 2026 | DRAM $80C profits taken ($110+$27 ≈ $137 / $230); rolled to **$75.5C** — weaker Jul RS, fine capping lower |
 | Jul 8, 2026 | VERA PDUFA approved Jul 7 — exit planned. **CAPR plan:** 3 shares, Jul 29 AdCom sell playbook; VERA→CAPR rotation Wed open |
 | Jul 6, 2026 | Mon trades: DRAM $80C sold, 0.883 DRAM trim, 1 VERA bought; GEV/CRDO skipped (margin) |
 
@@ -286,12 +317,14 @@ AMD: compute — second source to NVDA (high PE, growth priced in)
 ## Next review triggers
 
 - [x] **Tue Jul 7** — VERA PDUFA (approved); Samsung earnings; DRAM trades
-- [ ] **Wed Jul 8** — Sell VERA; buy CAPR ×3 (limit $22–22.50)
-- [ ] **Jul 10** — SK Hynix ADR earnings
+- [x] **Wed Jul 8** — Sell VERA; buy CAPR ×3 (limit $22–22.50)
+- [x] **Thu Jul 9** — DRAM $80C profit take; roll to $75.5C
+- [ ] **Jul 10** — SK Hynix **ADR listing (SKHY)** on Nasdaq — memory-sector sentiment, not an earnings print
+- [ ] **Jul 29** — SK Hynix Q2 2026 earnings
 - [ ] **Jul 11** — CORT PDUFA (pharma sector noise)
 - [ ] **Jul 14** — PJM auction (CEG watch only)
 - [ ] **Jul 22–23** — GEV / FIX earnings
-- [ ] **Jul 27–31** — VRT, MOD, PWR, NVT earnings cluster; DRAM $80C expiry
+- [ ] **Jul 27–31** — VRT, MOD, PWR, NVT earnings cluster; DRAM $75.5C expiry
 - [ ] **Jul 29** — **CAPR FDA AdCom — execute sell playbook**
 - [ ] **Aug 3** — STRL earnings (est $5.23)
 - [ ] **Aug 22** — CAPR PDUFA (only if still holding shares)

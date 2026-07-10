@@ -1,118 +1,109 @@
 # Daily High-Mover Prediction Scorecard
 
-**Started:** Jul 8, 2026
-**Purpose:** Predict the biggest daily winners/losers (±10%+) *in advance*, across all sectors, then grade myself objectively to refine the research process over time.
+**Started:** Jul 8, 2026  
+**Purpose:** Predict the biggest daily winners/losers (±10%+) *in advance*, across all sectors, then grade objectively to refine the research process over time.
 
-> Not financial advice. This is a research calibration exercise — I am NOT trading these. The point is to measure whether disciplined, catalyst-driven research can predict outsized moves better than noise.
+> Not financial advice. Research calibration only — not traded.
 
 ---
 
 ## Scoring rules
 
-Grading uses **close-to-close %** (prior session close → prediction-day close) as the objective metric.
+Primary metric = **close-to-close %** (prior session close → prediction-day close). Intraday extreme used for partial/near-miss credit only.
 
-| Outcome | Points |
+**All scored picks are directional** — I must commit a side (winner or loser). Volatility-only calls (big move, no side) may be logged for my own research but **score 0** — picking the side is the whole point.
+
+| Result | Points |
 |---|---|
-| Predicted WINNER moves **+10% or more** | **+2** |
-| Predicted LOSER moves **−10% or more** | **+2** |
-| Prediction wrong (direction wrong, OR move < 10% in predicted direction) | **−1** |
-| Explicitly excluded a "trap" that would've been a wrong pick | (noted, no points — discipline log) |
+| Directional, correct side, **≥10%** close | **+2** |
+| Directional, correct side, **5–10%** close | **+1** |
+| Directional, correct side, **≥5% intraday** but weak close | **0** |
+| Directional, dead pick (<5%, no travel) | **−1** |
+| Directional, **≥10% wrong way** | **−2** |
+| Volatility-only note (no side committed) | **0 (unscored)** |
+| Correctly excluded a trap (e.g. buyout-pinned) | 0 pts (discipline log) |
 
-- 3–5 winners and 3–5 losers per day.
-- A pick that moves the right direction but only, say, +6% still scores **−1** (the bar is 10%, no partial credit). This is intentionally harsh to force real conviction.
-- Monthly total + hit-rate tracked at the bottom.
+- **Conviction over quota.** Up to 3–5 per side — but only where there's a real thesis. Skip a side entirely rather than forcing coin-flips.
+- Realistic directional hit-rate target: **~40–55%**; value is monthly calibration.
 
 ---
 
 ## Research methodology / thesis
 
-The core insight from the user's critique: **fading yesterday's top gainers is not prediction — it's regression to the mean dressed up as analysis, and it blows up on the exact names that matter most.** A real edge requires identifying *why* a stock will move tomorrow via a mechanism, not just "it was up a lot."
+**Fading yesterday's top gainers is not prediction.** Every pick needs a *mechanism* — not "it was up a lot."
 
-### The move must have a MECHANISM. I bucket every candidate into one of 5 archetypes:
+### #1 rule: scan the FORWARD calendar, not just yesterday's leaderboard
 
-**A. Dated binary catalyst (highest-quality signal).**
-A scheduled, calendar-known event with a yes/no outcome and a short time horizon → near-guaranteed large move, direction uncertain but often lean-able.
-- Examples: PDUFA decisions, AdCom votes, top-line data webcasts, Phase readouts on a fixed date.
-- Edge: I know *it will move*; the skill is leaning the direction from setup (endpoint design, cash runway, prior data, analyst posture).
+**The biggest movers are usually NEW names with a scheduled/breaking catalyst — not yesterday's pumps.** Every run, before touching the prior-day movers, screen the whole market for TODAY/tomorrow catalysts:
+- **Biotech data readouts** (Phase 1b/2/3 top-line), PDUFA, AdCom — cut **both ways** (FBRX +78% clean data / IONS −24% Phase 3 flop, both Jul 9).
+- **Earnings** BMO/AMC + guidance.
+- **Government / defense contract awards** (LASR +27% on $627M JLWS).
+- **M&A, offerings, 8-Ks.**
+Yesterday's leaderboard is only for fade/continuation plays — it is NOT the universe.
 
-**B. Momentum continuation on a real-catalyst low-float runner.**
-A microcap that moved on *genuine* news (real data, real deal) with a tiny float tends to continue Day 2 as retail/momentum piles in before exhausting Day 3.
-- Requires: real catalyst (not a vague pump), low float, closed at/near highs, after-hours strength.
-- Edge: crowd behavior + supply squeeze. Medium confidence, two-sided risk.
+### Archetypes
 
-**C. Mechanical dilution / exhaustion fade.**
-A parabolic microcap up on a **dilutive** event (reverse merger, ATM, S-1 financing, warrants near-the-money) where the float squeeze is exhausting. The *mechanism* (share issuance overhang) pulls it down — this is NOT a lazy "it went up so it'll fall."
-- Requires: dilution overhang documented in filings + after-hours fade + extreme float turnover.
+**A. Dated binary catalyst** — PDUFA, AdCom, earnings BMO/AMC, data readout/webcast. Edge on *magnitude*; direction from **data quality**:
+- **Buy the news:** placebo-controlled, statistically significant (low p), dose-response, funded, Strong Buy (FBRX Jul 9 +78%).
+- **Sell the news:** small IST, unfunded, no commercial path, or **Phase 3 miss on primary endpoint** (MCRB −10%, IONS −24%). Track scheduled Phase 3 readouts — a flop is a clean short.
 
-**D. Sector/factor beta unwind.**
-A high-beta proxy (crypto-treasury names, leveraged single-stock themes) that overshot and will mean-revert with its underlying overnight.
+**B. Momentum continuation (Day 2 only)** — real catalyst + rel vol **≥10×** + cap **<$100M** + closed top third of range + AH holds. Day 3 = fade, not continuation.
 
-**E. Earnings / guidance gap.**
-A scheduled report (BMO or prior-day AMC) with a history of large post-print moves.
+**C. Dilution / exhaustion fade** — offering, ATM, S-1, reverse merger, warrants near money. Requires documented overhang in filings + AH fade + extreme float turnover. Best archetype on red/mixed tape.
 
-### The anti-pattern I explicitly avoid (discipline log)
-- **CRNX (+98.7% Jul 7): DO NOT FADE.** This is a **Vertex all-cash buyout at $85/share** (closed $83.53). It is now a **merger-arb pin** — it will trade flat near $85 until the Q3 close, NOT revert. A naive "fade the biggest gainer" model shorts this and loses. Excluded from both buckets. *This is the single most important discipline point in the whole exercise.*
-- Any move driven by a firm cash acquisition price = pinned, exclude.
+**D. Factor beta unwind** — crypto-treasury, premium-to-NAV, broken momentum vs underlying.
+
+**E. Earnings continuation** — double-beat + guide raise + PT hikes + close near highs = hold/multi-day, not scalp. High IV = magnitude; beat+guide+PT hikes = direction. Inverse: **guidance cut = gap down** (RXT −34%).
+
+**F. Government / defense contract award** — large contract win (esp. defense/directed-energy/AI theme) = same-day pop, often multi-day as analysts raise PTs. Liquid, real, buy-side (LASR +27%, $627M).
+
+### Operational filters (apply every run)
+
+- **Run the forward-catalyst scan FIRST** (see #1 rule) — don't declare "no conviction longs" until the calendar is checked.
+- **Exclude** buyout-pinned names (firm cash acquisition price = flat, won't move).
+- **Offering shorts:** scan for same-day counter-catalyst (partnership PR on close day = do not short). Deal price is a *floor*, not a gap target.
+- **Fraud/lawsuit shorts:** Day-1 panic only; check if allegations were previously investigated; need analyst downgrade for large caps.
+- **Market regime:** on broad green tape (semis/memory ripping), cut short conviction or skip non-microcap shorts.
+- **Microcap fade:** needs Day-2 rel vol still elevated; if volume collapses, skip.
+- **Short-weight the book** on red/mixed tape; **respect the tape** on green days.
 
 ---
 
-## Predictions — for Jul 8, 2026 (Wednesday)
+## Predictions — for Jul 10, 2026 (Friday)
 
-**Reference:** prior close = Jul 7, 2026. Scoring metric = Jul 7 close → Jul 8 close.
+**Reference:** prior close = Jul 9. Scoring metric = Jul 9 close → Jul 10 close.
 
-### WINNERS (predict +10%+)
+### Gap up (+10%+) — directional
 
-| # | Ticker | Jul 7 close | Archetype | Mechanism / thesis | Confidence it moves ±10% | Confidence direction (up) | Invalidation |
+| # | Ticker | Jul 9 close | Direction | Archetype | Mechanism / thesis | Conf. direction | Invalidation |
 |---|---|---|---|---|---|---|---|
-| 1 | **MCRB** (Seres) | ~$8.00 | A — dated binary | **Jul 8, 8:30 AM ET webcast** = top-line data from 15-pt IST of SER-155 in checkpoint-inhibitor enterocolitis. Clean binary endpoint (Day-15 immunosuppressive-free response). BTD + Fast Track drug, cash into Q1'27 (low dilution pressure), HC Wainwright Buy PT $12 vs $8. Company scheduling a dedicated webcast = mild positive tell. | **~85%** | ~55% (lean up, but genuinely two-sided) | Vague/"mixed" data language, or a "we need funding" pivot on the call |
-| 2 | **TVRD** (Tvardi) | $3.10 | B — momentum continuation | Day 1 was +54% on *real* Phase 1 STAT3-inhibitor (TTI-109) data, 97× rel vol, $29M cap, closed mid-range with AH tick to $3.23. Tiny float + real catalyst = classic Day-2 follow-through setup. | ~55% | ~45% | Gap-and-fade at open; no follow-through volume |
-| 3 | **FHTX** (Foghorn) | $6.01 | B — momentum continuation | +18.8% Day 1, closed at session high ($6.24 range top), AH ask $7.20 (thin but bullish). Oncology, Strong Buy. Strength into the close + AH = momentum carry. | ~45% | ~45% | AH quote was thin; opens flat and stalls |
+| 1 | **WDFC** (WD-40) | $239.01 | **UP** | E — earnings beat + guide raise | AMC Jul 9: Q3 adj EPS **$2.33 vs $1.56**, sales beat, **raised FY guide**. Low-beta staple → surprise this large re-rates it. | ~55% | Staple inertia; AH already priced much of the move |
+| 2 | **LASR** (nLight) | $74.68 | **UP** | F — defense contract | Day 1 +27% on **$627M JLWS laser contract**; PT → $100; closed near highs. Directed-energy theme, Day-2 momentum. | ~50% | Initial award only $44M of ceiling → Day-2 fade |
+| 3 | **WRAP** (Wrap Tech) | $2.36 | **UP** | Regulatory unlock (≈F) | ATF Ruling 2026-2: BolaWrap = restraint, not firearm — unlocks agency procurement + WrapShield AI defense. Day 1 +48%, ~116× rel vol, ~$132M cap, AH held. | ~50% | Procurement is slow; Day-2 fade after +48%; thin float both ways |
 
-### LOSERS (predict −10%+)
+### Gap down (−10%+) — directional
 
-| # | Ticker | Jul 7 close | Archetype | Mechanism / thesis | Confidence it moves ±10% | Confidence direction (down) | Invalidation |
+| # | Ticker | Jul 9 close | Direction | Archetype | Mechanism / thesis | Conf. direction | Invalidation |
 |---|---|---|---|---|---|---|---|
-| 1 | **CLRO** (ClearOne) | $13.66 | C — dilution/exhaustion fade | +97% on **reverse merger** with Cortigent/Vivani. Legacy holders end up ~13% owners; **12.5M shares to Vivani + $10–15M S-1 unit financing with $10 warrants** (near-the-money). Float turned over **48×** — a supply-starved squeeze, not fundamentals. AH already faded $16.29 → $13.27. Dilution overhang + exhaustion. | ~65% | ~55% | Low-float squeezes are violent both ways — a fresh momentum gap-up can extend before it breaks |
-| 2 | **ABTC** (American Bitcoin) | $6.52 | D — factor beta unwind | Crypto-treasury proxy, already −23% Jul 7. Trades at premium to BTC NAV; BTC soft (~$62.6k). Premium compression + broken momentum. AH $6.52 vs intraday $8.33 high = rolling over. | ~55% | ~50% | BTC rips overnight; Trump-branded name gets a retail bid |
-| 3 | **SECZ** (Securitize) | $8.09 | C/D — post-break continuation | −26% Jul 7, **AH bid ~$7.00** (another ~−13% indicated). No visible stabilizing catalyst; wide spread + heavy supply. AH quote suggests it opens lower. | ~50% | ~50% | Thin AH quote unreliable; a dip-buy bounce erases the gap |
+| 1 | **VRAX** | $6.39 | **DOWN** | Blow-off exhaustion | Spiked +178% to $13.18, reversed to $6.39 close (−52% off high), AH below close. Momentum broken → Day-2 crash. | ~55% | Ultra-thin $2.5M cap — can re-ignite on any headline |
+| 2 | **GLOO** | ~$3.04 | **DOWN** | C — dilution / offering | Priced **7M share offering at $3.25**, closes **Jul 10**. Overhang into settlement; Day-1 already −24%. | ~55% | Affiliate $6M buy commitment; underwriter stabilization |
+| 3 | **FRMI** (Fermi) | ~$7.32 | **DOWN** | C — convert dilution | AMC Jul 9: proposed **$350M convertible notes** (+$52.5M option). AH sold ~17% — dilution into next RTH. | ~50% | Capped-call narrative softens reaction |
 
-### Watchlist (not scored — insufficient conviction/edge)
-- **SKYQ** — oil/short-squeeze play on Strait of Hormuz shipping disruption; direction depends on unpredictable oil headlines.
-- **PYXS** — +24.8% oncology Strong Buy, but weak rel vol (1.2×) → catalyst unclear, likely no follow-through.
-- **AZZ** — earnings Jul 8 **after close**, so the move lands Jul 9, not scored here.
+### Watchlist / excluded (not scored)
 
----
-
-## Honest confidence statement
-
-- The **only** genuinely high-probability "**it will move ±10%**" call is **MCRB** (dated binary). Everything else is 45–65% on magnitude and roughly coin-flip on direction.
-- Realistic expectation for next-day *directional* ±10% prediction, even with disciplined research: **~40–55% hit rate.** Anyone claiming higher on single names a day out is guessing.
-- The value of this exercise is **calibration over a month** — which archetypes actually pay, and whether my confidence numbers are honest (do my "55%" picks hit ~55%?).
-
----
-
-## Grading — Jul 8, 2026 *(fill in after close)*
-
-| Ticker | Bucket | Predicted | Jul 8 close | Actual % | Hit? | Points |
-|---|---|---|---|---|---|---|
-| MCRB | Winner | +10%+ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| TVRD | Winner | +10%+ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| FHTX | Winner | +10%+ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| CLRO | Loser | −10%+ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| ABTC | Loser | −10%+ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| SECZ | Loser | −10%+ | _tbd_ | _tbd_ | _tbd_ | _tbd_ |
-| **Day total** | | | | | | **_tbd_** |
-
-**Discipline check:** Did CRNX stay pinned near $85 (correct exclusion)? _tbd_
+- **JLHL** — accelerating AH pump, no catalyst; do not short.
+- **FBRX / TRAX** — Day-2 coin flips after Day-1 biotech pops.
+- **BYRN / AFJK** — Day-1 damage already done (−34% / −50%); weak Day-2 edge.
+- **ELAB** — AH pop on internal sub merger with no equity impact = trap.
+- **DAL / SKHY** — real Jul 10 events, wrong magnitude for ±10%.
+- **IONS / RXT / NRIX** — catalysts already Day-1 or mixed.
 
 ---
 
 ## Monthly scorecard (July 2026)
 
-| Date | Picks | Hits | Points | Notes / lessons |
-|---|---|---|---|---|
-| Jul 8 | 6 | _tbd_ | _tbd_ | First run. Thesis: dated binary (MCRB) is the anchor; testing momentum-continuation vs dilution-fade archetypes. |
-| **MTD total** | | | **_tbd_** | |
-
-### Process learnings (update after each grading)
-- _tbd — e.g. "Momentum-continuation (archetype B) went 0/2, day-2 fades dominated → tighten to only names with AH strength >X%."_
+| Date | Picks | Points |
+|---|---|---|
+| Jul 8 | 9 | **+7** |
+| Jul 9 | 5 | **−5** |
+| **MTD total** | **14** | **+2** |
